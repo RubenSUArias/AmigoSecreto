@@ -7,6 +7,6 @@ function agregarAmigo() {
     
     listaAmigos.push(nombreamigo);
     console.log(listaAmigos);
- 
+    
     return;
 }
