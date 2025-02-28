@@ -2,13 +2,6 @@
 let lista_de_Amigos = []
 
 
-function asignarTextoElemento(elemento, texto) {
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = texto;
-    return;
-}
-
-
 
 
 function agregarAmigo() {
@@ -47,17 +40,20 @@ function sortearAmigo(){
     let elementos = lista.getElementsByTagName('li');
     console.log(elementos.length)
 
-    // Iteramos sobre los elementos y los mostramos en la consola
-   // for (let i = 0; i < elementos.length; i++) {
-   // console.log(elementos[i].textContent);
-   // }Math.floor(Math.random()*elementos.length)
+    //generar un numero aleatorio para elegir de entre la lista
     let numeroGenerado =  Math.floor(Math.random()*elementos.length);
     console.log(numeroGenerado);
     console.log(elementos[numeroGenerado].textContent);
+    //Darle formato para escribir el elemento en pantalla
 
     const nuevoElemento = document.createElement('li');
     // Asignar texto al nuevo elemento
-    nuevoElemento.textContent = elementos[numeroGenerado].textContent;
+    nuevoElemento.textContent = `El amigo secreto es: ${elementos[numeroGenerado].textContent}`;
+
+    while (lista.firstChild) {
+        lista.removeChild(lista.firstChild);
+    }
+    
     document.getElementById('resultado').appendChild(nuevoElemento);
 
 }
