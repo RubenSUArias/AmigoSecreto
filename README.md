@@ -11,7 +11,7 @@ Este proyecto es parte del primer Challenge de Alura LATAM
 ## Instalación
 1. Clona este repositorio:
    ```sh
-   git clone https://github.com/usuario/sorteador-nombres.git
+   git clone https://github.com/RubenSUArias/AmigoSecreto.git
    ```
 2. Accede al directorio del proyecto:
    ```sh
